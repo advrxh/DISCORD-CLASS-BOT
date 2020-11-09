@@ -39,7 +39,7 @@ async def on_message(message):
 		
 		for i in search(query): 
 			results.append(i)
-			await message.channel.send(f"```Result on {query} @{message.author[:-4]}:```{i}")
+			await message.channel.send(f"```Result on {query} @{message.author}:```{i}")
 
 
 client.run(token)  
