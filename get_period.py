@@ -1,5 +1,4 @@
 import openpyxl
-from user_defined import wb_name
 import arrow
 from sys import exit
 
@@ -84,5 +83,41 @@ def period():
     wday = check_day()
     prd = check_prd(wday=wday)
     return prd
+
+def specprd(day, prd):
+    global day_obj
+    day_obj = arrow.get(day,'ddd').format('dddd')
+    print(str(day_obj))
+
+        
+    for row in range(1, sheet1.max_row + 1):
+        
+        print(str(sheet1.cell(row=row, column=1).value))
+
+        if str(sheet1.cell(row=row, column=1).value).lower() == str(day_obj).lower():
+            
+            if prd == 1:
+                required_prd = str(sheet1.cell(row=row, column=2).value)
+                return required_prd
+                break
+            if prd == 2:
+                required_prd = str(sheet1.cell(row=row, column=3).value)
+                return required_prd
+                break
+            if prd == 3:
+                required_prd = str(sheet1.cell(row=row, column=4).value)
+                return required_prd
+                break
+        
+
+        else:
+            print('', end='')
+    
+    
+
+
+
+
+    
 
 
