@@ -52,7 +52,7 @@ async def on_message(message):
 		day_obj = arrow.get(day_, 'ddd').format('dddd')
 		period_req = sprd(day_, prd_)
 		await message.channel.send(f"``` You will be having {period_req} on {str(day_obj)}, {prd_} period ```")
-		i = 1
+		
 	
 
 		
