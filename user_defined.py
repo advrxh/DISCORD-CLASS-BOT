@@ -2,7 +2,7 @@
 
 #discord_token
 TOKEN_1 = 'Nzc0MjA4OTczNzUwMTQwOTU5.X6UcSw'
-TOKEN_2 = '.lI9Ed126BIk-UqR67p3FYEDWolY'
+TOKEN_2 = '.f2d-onhTR6dOetWBhHzIA0gn4i0'
 #CHROMEDRIVER PATH
 PATH = 'C:\\chromedriver.exe'
 #wb name
