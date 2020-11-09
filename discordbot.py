@@ -37,7 +37,7 @@ async def on_message(message):
 	if message.content.lower()[0] == '?':
 		query = str(message.content.lower())[1:]
 		
-		for i in search(query): 
+		for i in search(query, num = 3): 
 			results.append(i)
 			await message.channel.send(f"```Result on {query} @{message.author}:```{i}")
 
