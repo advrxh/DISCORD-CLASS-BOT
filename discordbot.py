@@ -43,20 +43,18 @@ async def on_message(message):
 		for i in search(query, num_results=3): 
 			results.append(i)
 			await message.channel.send(f"```Result on {query} @{message.author}:```{i}")
-	i = 0
-	while i < 1:
-		
-		if message.content.lower()[0:2] == 'p?':
-			args = str(message.content.lower()[3:]).split(' ')
-			day_ = args[0].title()
-			prd_ = int(args[1])
-			day_obj = arrow.get(day_, 'ddd').format('dddd')
-			period_req = sprd(day_, prd_)
-			await message.channel.send(f"``` You will be having {period_req} on {str(day_obj)}, {prd_} period ```")
-			i = 1
-		else:
-			await message.channel.send(f"``` Sorry @{message.author} I didnt get it ```")
 	
+		
+	if message.content.lower()[0:2] == 'p?':
+		args = str(message.content.lower()[3:]).split(' ')
+		day_ = args[0].title()
+		prd_ = int(args[1])
+		day_obj = arrow.get(day_, 'ddd').format('dddd')
+		period_req = sprd(day_, prd_)
+		await message.channel.send(f"``` You will be having {period_req} on {str(day_obj)}, {prd_} period ```")
+		i = 1
+	
+
 		
 
 
