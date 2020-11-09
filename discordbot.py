@@ -3,6 +3,7 @@ import discord
 from user_defined import TOKEN_1, TOKEN_2
 from get_period import period
 
+token = str(TOKEN_1 + TOKEN_2)
 client = discord.Client()  
 
 
@@ -29,4 +30,4 @@ async def on_message(message):
 
 
 
-client.run(TOKEN_1 + TOKEN_2)  
+client.run(token)  
