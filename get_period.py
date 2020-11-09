@@ -70,12 +70,14 @@ def check_prd(wday):
                     running = False
 
                 else:
-                    PERIOD = 'Class time is over'
+                    
                     print('no class time')
             elif str(sheet1.cell(row=row, column=1).value).lower() == wday and current_meridian != 'AM':
                 print('it aint class time!!')
+                PERIOD = 'Class time is over'
+                return PERIOD
                 running = False
-                exit()
+                
 
 
 def period():
