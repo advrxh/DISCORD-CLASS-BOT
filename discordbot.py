@@ -3,7 +3,7 @@ from googlesearch import search
 
 from user_defined import TOKEN_1, TOKEN_2
 from get_period import period
-from get_period import specprd
+from get_period import prd
 import arrow
 
 token = str(TOKEN_1 + TOKEN_2)
@@ -47,7 +47,7 @@ async def on_message(message):
 		day_ = args[0].title()
 		prd_ = int(args[1])
 		day_obj = arrow.get(day_, 'ddd').format('dddd')
-		await message.channel.send(f"``` You will be having {specprd(day = day_, prd = prd_)} on {str(day_obj)}, {prd_} period ```")
+		await message.channel.send(f"``` You will be having {prd(day = day_, prd = prd_)} on {str(day_obj)}, {prd_} period ```")
 		
 
 
