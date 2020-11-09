@@ -5,6 +5,7 @@ async-timeout==3.0.1
 attrs==20.3.0
 beautifulsoup4==4.9.2
 certifi==2020.6.20
+google-search==1.0.2
 discord==1.0.1
 discord.py==1.5.1
 distlib==0.3.1
