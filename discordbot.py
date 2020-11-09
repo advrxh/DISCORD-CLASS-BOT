@@ -1,5 +1,4 @@
 import discord
-from random import choice
 
 from user_defined import TOKEN_1, TOKEN_2
 from get_period import period
@@ -12,10 +11,6 @@ client = discord.Client()
 async def on_ready(): 
     print(f'We have logged in as {client.user}') 
 
-aadil_commands = ['Hey master... ur the only person i care of :heart_eyes: ', 'Ohh my beloved boss :heart:', 'Hey can i tell u something u are cute!']
-tharun_commands = ['Hey dude u suck at codm!! :smirk:', 'hey dont worry Petty wont dissapoint u ! :rofl: :rofl: :rofl:', 'Hey how is Ms.Prathiba? :rofl:', 'You are the biggest simp i have ever seen in my bot carrier! :hugging: :hugging_face:']
-lakshmi_commands = ['Hey mind if i say something BTS SUCKS it really sucks.. :smirk: :rofl:', 'Hey how do u even recognize those guys at BTS..:rofl: :rofl: :rofl:', 'btw u really didnt suit for the narrators role :smirk: ', 'Lakshmi u are not the good girl i am :smirk:']
-suzanne_commands = ['Hey hows balendran doing :rofl:' , 'u really dont have a humour sense :rofl:', '999 rs is a bit low for a book from an author like u :joy::rofl:']
 
 @client.event
 async def on_message(message):
