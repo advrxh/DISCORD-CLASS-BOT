@@ -4,3 +4,6 @@ discord==1.0.1
 discord.py==1.5.1
 openpyxl==3.0.5
 google-search==1.0.2
+lxml==4.6.1
+beautifulsoup4==4.9.3
+soupsieve==2.0.1
