@@ -1,10 +1,11 @@
 import discord
-from googlesearch.googlesearch import GoogleSearch
+from googlesearch import search
 
 from user_defined import TOKEN_1, TOKEN_2
 from get_period import period
 
 token = str(TOKEN_1 + TOKEN_2)
+my_results_list = []
 client = discord.Client()  
 
 
@@ -28,10 +29,11 @@ async def on_message(message):
 	if "tbh?" ==  message.content.lower():
 		await message.channel.send(f"I am a bot which gives u info on ur class meets @{message.author}")
 	if message.content.lower()[0] == '?':
-		response = GoogleSearch().search(message.content.lower()[1:])
+		query = message.content.lower()[1:]
 		
-		for result in response.results:
-			await message.channel.send(f"```Title: {result.title}```")
-			await message.channel.send(f"```Results: {result.getText()}```")
+		for i in search(query,tld = 'com',lang = 'en',num = 5, start = 0,stop = None, pause = 2.0,): 
+			results.append(i)
+			await message.channel.send(f"```Result on query:{i}")
+
 
 client.run(token)  
