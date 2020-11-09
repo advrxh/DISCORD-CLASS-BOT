@@ -18,10 +18,12 @@ async def on_ready():
 async def on_message(message):
 	
 	if "period?" == message.content.lower():
-		if str(period()) is not "Class time is over":
+		if str(period()) != "Class time is over":
 			await message.channel.send(f"```You will be having {period()[0]} for your {period()[1]} period.```")
-		else:
+		elif str(period()) == "Class time is over":
 			await message.channel.send(f"```Class hours finished```")
+		else:
+			await message.channel.send(f'```syntax error```')
 		
 	if "hi!" == message.content.lower():
 		await message.channel.send(f"Hello!! @{message.author}")
@@ -31,6 +33,7 @@ async def on_message(message):
 	
 	if "tbh?" ==  message.content.lower():
 		await message.channel.send(f"I am a bot which gives u info on ur class meets @{message.author}")
+	
 	if message.content.lower()[0] == '?':
 		query = str(message.content.lower())[1:]
 		
