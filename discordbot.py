@@ -2,7 +2,9 @@ import discord
 from googlesearch import search
 
 from user_defined import TOKEN_1, TOKEN_2
-from get_period import  sprd
+from get_period import sprd
+from get_period import period
+
 import arrow
 
 token = str(TOKEN_1 + TOKEN_2)
@@ -41,12 +43,14 @@ async def on_message(message):
 		for i in search(query, num_results=3): 
 			results.append(i)
 			await message.channel.send(f"```Result on {query} @{message.author}:```{i}")
+	
 	if message.content.lower()[0:2] == 'p?':
 		args = str(message.content.lower()[3:]).split(' ')
 		day_ = args[0].title()
 		prd_ = int(args[1])
 		day_obj = arrow.get(day_, 'ddd').format('dddd')
-		await message.channel.send(f"``` You will be having {sprd(day = day_, prd = prd_)} on {str(day_obj)}, {prd_} period ```")
+		period_req = sprd(day_, prd_)
+		await message.channel.send(f"``` You will be having {period_req} on {str(day_obj)}, {prd_} period ```")
 		
 
 
