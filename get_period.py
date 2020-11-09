@@ -6,9 +6,9 @@ from sys import exit
 wb = openpyxl.load_workbook('tt.xlsx')
 sheet1 = wb['Sheet1']
 
-current_day = str(arrow.now().format('dddd'))
-current_time = str(arrow.now().format('hh:mm'))
-current_meridian = str(arrow.now().format('A'))
+current_day = str(arrow.now('Asia/Calcutta').format('dddd'))
+current_time = str(arrow.now('Asia/Calcutta').format('hh:mm'))
+current_meridian = str(arrow.now('Asia/Calcutta').format('A'))
 
 
 def return_prd(prd, wday):
