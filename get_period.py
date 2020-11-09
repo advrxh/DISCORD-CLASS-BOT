@@ -84,7 +84,7 @@ def period():
     prd = check_prd(wday=wday)
     return prd
 
-def prd(day, prd):
+def sprd(day, prd):
     global day_obj
     day_obj = arrow.get(day,'ddd').format('dddd')
     print(str(day_obj))
