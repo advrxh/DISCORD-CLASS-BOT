@@ -21,6 +21,9 @@ async def on_message(message):
 		if "hi!" == message.content.lower():
 			await message.channel.send(f"Hello!! @{message.author}")
 			i = 1
+		if "alive?" == message.content.lower():
+			await message.channel.send(f"Yes I am!! @{message.author}")
+			i = 1
 
 
 
