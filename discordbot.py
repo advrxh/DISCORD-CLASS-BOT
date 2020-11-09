@@ -34,7 +34,7 @@ async def on_message(message):
 	if "tbh?" ==  message.content.lower():
 		await message.channel.send(f"I am a bot which gives u info on ur class meets @{message.author}")
 	
-	if message.content.lower()[0] == '?':
+	if message.content.lower()[0:2] == 'g?':
 		query = str(message.content.lower())[1:]
 		
 		for i in search(query, num_results=3): 
