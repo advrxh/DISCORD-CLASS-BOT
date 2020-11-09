@@ -84,15 +84,13 @@ def period():
     prd = check_prd(wday=wday)
     return prd
 
+
 def sprd(day, prd):
-    global day_obj
     day_obj = arrow.get(day,'ddd').format('dddd')
-    print(str(day_obj))
 
         
     for row in range(1, sheet1.max_row + 1):
         
-        print(str(sheet1.cell(row=row, column=1).value))
 
         if str(sheet1.cell(row=row, column=1).value).lower() == str(day_obj).lower():
             
