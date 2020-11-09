@@ -33,7 +33,6 @@ opencv-python==4.4.0.44
 openpyxl==3.0.5
 Pillow==7.2.0
 playsound==1.2.2
-PyAudio @ file:///C:/Users/Admin/Downloads/PyAudio-0.2.11-cp37-cp37m-win_amd64.whl
 PyAutoGUI==0.9.50
 pyFirmata==1.1.0
 pygame==1.9.6
