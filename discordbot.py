@@ -29,9 +29,9 @@ async def on_message(message):
 	if "tbh?" ==  message.content.lower():
 		await message.channel.send(f"I am a bot which gives u info on ur class meets @{message.author}")
 	if message.content.lower()[0] == '?':
-		query = message.content.lower()[1:]
+		query = str(message.content.lower())[1:]
 		
-		for i in search(query,tld = 'com',lang = 'en',num = 5, start = 0,stop = None, pause = 2.0,): 
+		for i in search(query,tld = 'com',lang = 'en',num = 5, start = 0,stop = None, pause = 2.0): 
 			results.append(i)
 			await message.channel.send(f"```Result on query:{i}")
 
