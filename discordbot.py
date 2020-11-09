@@ -14,17 +14,16 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-	i = 0
-	while i < 1:
-		if "period?" == message.content.lower():
-			await message.channel.send(f"```You will be having {period()[0]} for your {period()[1]} period.```")
-			i = 1
-		if "hi!" == message.content.lower():
-			await message.channel.send(f"Hello!! @{message.author}")
-			i = 1
-		if "alive?" == message.content.lower():
-			await message.channel.send(f"Yes I am !! @{message.author}")
-			i = 1
+	
+	if "period?" == message.content.lower():
+		await message.channel.send(f"```You will be having {period()[0]} for your {period()[1]} period.```")
+		
+	if "hi!" == message.content.lower():
+		await message.channel.send(f"Hello!! @{message.author}")
+		
+	if "alive?" == message.content.lower():
+		await message.channel.send(f"Yes I am !! @{message.author}")
+		
 
 
 
