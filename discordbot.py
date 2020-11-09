@@ -18,6 +18,7 @@ async def on_ready():
 async def on_message(message):
 	
 	if "period?" == message.content.lower():
+		if str(period()) is not ""
 		await message.channel.send(f"```You will be having {period()[0]} for your {period()[1]} period.```")
 		
 	if "hi!" == message.content.lower():
