@@ -28,9 +28,9 @@ async def on_ready():
 async def on_message(message):
 	
 	if "period?" == message.content.lower():
-		if int(hour) > 08 and int(hour) < 12 and meridian == 'AM':
+		if int(hour) > 8 and int(hour) < 12 and meridian == 'AM':
 			await message.channel.send(f"```You will be having {period()[0]} for your {period()[1]} period.```")
-		elif int(hour) > 12 and int(hour) < 08 and meridian == 'AM':
+		elif int(hour) > 12 and int(hour) < 8 and meridian == 'AM':
 			await message.channel.send(f"```Not at the moment in few hours or minutes.```")
 		else:
 			await message.channel.send(f'```Class hours have been finished```')
