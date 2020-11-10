@@ -10,10 +10,24 @@ import arrow
 current_time = str(arrow.now('Asia/Calcutta').format('hh:mm:A'))
 time_elements = current_time.split(':')
 
-hour = time_elements[0]
-minute = time_elements[1]
-meridian = time_elements[2]
+def ret_obj_h(time):
+	req_time = arrow.get(time, 'h')
+	return req_time
 
+def ret_obj(time):
+	req_time = arrow.get(time, 'h:m')
+	return req_time
+
+def ret_obj_a(time):
+	req_time = arrow.get(time, 'A')
+	return req_time
+
+
+
+hour = arrow.get(time_elements[0], 'h')
+minute = arrow.get(time_elements[1], 'm')
+meridian = arrow.get(time_elements[2], 'A')
+h_m = arrow.get(time_elements[0] + ':' + time_elements[1], 'h:m') 
 token = str(TOKEN_1 + TOKEN_2)
 results = []
 client = discord.Client()  
@@ -28,11 +42,11 @@ async def on_ready():
 async def on_message(message):
 	
 	if "period?" == message.content.lower():
-		if arrow.get(hour, 'h') > arrow.get('12', 'h') and arrow.get(hour + ':' + minute, 'h:m') < arrow.get('11:59', 'h:m') and str(arrow.get(meridian, 'A')) == 'AM':
+		if  meridian == ret_obj_a('AM') and ret_obj('11:59') >= h_m >= ret_obj_h('8') :
 			
 			await message.channel.send(f"```You will be having {period()[0]} for your {period()[1]} period.```")
 		
-		elif arrow.get(hour, 'h') > arrow.get('12', 'h') and arrow.get(hour + ':' + minute, 'h:m') < arrow.get('11:59', 'h:m') and str(arrow.get(meridian, 'A')) == 'PM' :
+		elif  meridian == ret_obj_a('AM') and ret_obj('11:59') <= h_m <= ret_obj('8:0') :
 			
 			await message.channel.send(f"```Not at the moment in few hours or minutes.```")
 		
