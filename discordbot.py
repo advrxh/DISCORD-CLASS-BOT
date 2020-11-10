@@ -28,10 +28,14 @@ async def on_ready():
 async def on_message(message):
 	
 	if "period?" == message.content.lower():
-		if int(hour) > 8 and int(hour) < 12 and meridian == 'AM':
+		if arrow.get(hour, 'h') > arrow.get('12', 'h') and arrow.get(hour + ':' + minute, 'h:m') < arrow.get('11:59', 'h:m') and str(arrow.get(meridian, 'A')) == 'AM':
+			
 			await message.channel.send(f"```You will be having {period()[0]} for your {period()[1]} period.```")
-		elif int(hour) > 12 and int(hour) < 8 and meridian == 'AM':
+		
+		elif arrow.get(hour, 'h') > arrow.get('12', 'h') and arrow.get(hour + ':' + minute, 'h:m') < arrow.get('11:59', 'h:m') and str(arrow.get(meridian, 'A')) == 'PM' :
+			
 			await message.channel.send(f"```Not at the moment in few hours or minutes.```")
+		
 		else:
 			await message.channel.send(f'```Class hours have been finished```')
 		
@@ -61,9 +65,4 @@ async def on_message(message):
 		await message.channel.send(f"``` You will be having {period_req} ```")
 		sleep(1)
 		
-	
-
-		
-
-
 client.run(token)  
