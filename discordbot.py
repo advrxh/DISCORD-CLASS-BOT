@@ -42,16 +42,12 @@ async def on_ready():
 async def on_message(message):
 	
 	if "period?" == message.content.lower():
-		if  meridian == ret_obj_a('AM') and ret_obj('11:59') >= h_m >= ret_obj_h('8') :
 			
 			await message.channel.send(f"```You will be having {period()[0]} for your {period()[1]} period.```")
 		
-		elif  meridian == ret_obj_a('AM') and ret_obj('11:59') <= h_m <= ret_obj('8:0') :
 			
-			await message.channel.send(f"```Not at the moment in few hours or minutes.```")
 		
-		else:
-			await message.channel.send(f'```Class hours have been finished```')
+		
 		
 	if "!hi" == message.content.lower():
 		await message.channel.send(f"Hello!! @{message.author}")
