@@ -1,5 +1,7 @@
-import socket    
-hostname = socket.gethostname()    
-IPAddr = socket.gethostbyname(hostname)    
-print("Your Computer Name is:" + hostname)    
-print("Your Computer IP Address is:" + IPAddr)
+from googlesearch import search
+results = []
+query = 'what is my ip?'
+
+for i in search(query, num_results=3):
+  results.append(i)
+  print(i)
