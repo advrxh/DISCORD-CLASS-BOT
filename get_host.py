@@ -1,6 +1,6 @@
 import socket
 
-HOST = '172.19.75.74'  # Standard loopback interface address (localhost)
+HOST = socket.gethostbyname(socket.gethostname())  # Standard loopback interface address (localhost)
 PORT = 7171        # Port to listen on (non-privileged ports are > 1023)
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
