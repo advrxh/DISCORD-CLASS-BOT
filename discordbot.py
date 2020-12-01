@@ -80,7 +80,7 @@ async def on_message(message):
 	if message.content.lower() == '.q':
 		if message.author != 'iSimpYT_#8601':
 			quote_tup = quote(rand_no, data)
-			await message.channel.send(f"```{quote_tup[0]}\n\n-- *{quote_tup[1]}*```")
+			await message.channel.send(f"```{quote_tup[0]}\n\n-- {quote_tup[1]}```")
 		else:
 			await message.channel.send(f"```@{message.author} you have been banned for spamming```")
 		
