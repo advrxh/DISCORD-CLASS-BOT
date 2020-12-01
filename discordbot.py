@@ -4,6 +4,7 @@ from googlesearch import search
 from user_defined import TOKEN_1, TOKEN_2
 from get_period import sprd
 from get_period import period
+
 from quotes import quote
 from quotes import rand_no, data
 
