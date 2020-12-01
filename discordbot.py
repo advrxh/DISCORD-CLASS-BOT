@@ -4,6 +4,8 @@ from googlesearch import search
 from user_defined import TOKEN_1, TOKEN_2
 from get_period import sprd
 from get_period import period
+from quotes import quote
+from quotes import rand_no, data
 
 from time import sleep
 import arrow
@@ -74,5 +76,9 @@ async def on_message(message):
 		period_req = sprd(day_, prd_)
 		await message.channel.send(f"``` You will be having {period_req} ```")
 		sleep(1)
+	if message.content.lower() == '.q':
+		quote_tup = quote(rand_no, data)
+		await message.channel.send(f"```{quote_tup[0]}\nby {quote_tup[1]}```")
+		
 		
 client.run(token)  
