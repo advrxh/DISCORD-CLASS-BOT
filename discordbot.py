@@ -78,7 +78,7 @@ async def on_message(message):
 		sleep(1)
 	if message.content.lower() == '.q':
 		quote_tup = quote(rand_no, data)
-		await message.channel.send(f"```{quote_tup[0]}\nby {quote_tup[1]}```")
+		await message.channel.send(f"```{quote_tup[0]}\n\n--{quote_tup[1]}```")
 		
 		
 client.run(token)  
