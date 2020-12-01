@@ -11,7 +11,6 @@ def quote(list_, data):
 	return (data['quotes'][cur_choice]['quote'], data['quotes'][cur_choice]['author'])
 
 
-print(quote(rand_no, data))
 
 
 
