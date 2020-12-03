@@ -77,10 +77,11 @@ async def on_message(message):
 		period_req = sprd(day_, prd_)
 		await message.channel.send(f"``` You will be having {period_req} ```")
 		sleep(1)
-	if message.content.lower() == '.q'and (str(message.author).strip() == 'iSimpYT_#3772' or str(message.author).strip() == 'iSimpYT_#8601' ):
+	if message.content.lower() == '.q'and (str(message.author) == 'iSimpYT_#3772' or str(message.author) == 'iSimpYT_#8601' ):
 			await message.channel.send(f"```[User Spamming Reported] [You can use this command after 785 Days]```")
 
-	if message.content.lower() == '.q'and (str(message.author).strip() != 'iSimpYT_#3772' or str(message.author).strip() != 'iSimpYT_#8601' ):
+	else:
+		if message.content.lower() == '.q':
 			quote_tup = quote(rand_no, data)
 			await message.channel.send(f"```{quote_tup[0]}\n\n-- {quote_tup[1]}```")
 			
