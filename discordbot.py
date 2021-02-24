@@ -159,7 +159,7 @@ async def on_message(message):
 	#phy
 	if message.content.lower() == "-p":
 		portions = str()
-		portions_list = list(ReturnPortionsSpecific('-physics').values())
+		portions_list = list(ReturnPortionsSpecific('physics').values())
 		
 
 		for i, j  in enumerate(portions_list):
