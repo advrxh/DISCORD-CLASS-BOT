@@ -1,0 +1,118 @@
+{
+	"mathematics":{
+		"1" : "number systems",
+		"2" : "polynomials",
+		"3" : "coordinate geometry",
+		"4" : "linear equations in one variable",
+		"6" : "lines and angles",
+		"7" : "triangles",
+		"8" : "quadilaterals",
+		"11" : "construction",
+		"12" : "herons formula",
+		"13" : "surface area and volumes",
+		"14" : "statistics",
+		"15" : "probability"
+	},
+	
+	"chemistry" : {
+		"2" : "is matter around us pure?",
+		"3" : "atoms and molecules",
+		"4" : "structure of an atom"
+
+ 	},
+
+ 	"physics" : {
+ 		"8" : "Motion",
+ 		"9" : "force and laws of motion",
+ 		"10" : "gravitation",
+ 		"11" : "work, power and energy"
+ 	},
+
+ 	"biology" : {
+ 		"5" : "fundamental unit of life",
+ 		"6" : "tissues",
+ 		"13" : "why do we fall ill"
+
+ 	},
+
+ 	"history" : {
+ 		"1" : "french revolution",
+ 		"2" : "socialism in europe and the russian revolution",
+ 		"3" : "nazism and rise of hitler"
+
+ 	},
+
+ 	"economics" : {
+ 		"1" : "the story of village palampur",
+ 		"2" : "people as resource",
+ 		"3" : "poverty as a challenge"
+ 	},
+
+ 	"geography" : {
+ 		"1" : "india size and location",
+ 		"2" : "physical features of india",
+ 		"4" : "climate",
+ 		"5" : "Natural vegetation and wildlife"
+ 	},
+
+ 	"civics" : {
+ 		"1" : "what is democracy?",
+ 		"3" : "electoral politics",
+ 		"2" : "constitutional design",
+ 		"4" : "working of institutions"
+ 	},
+
+ 	"hindi" : {
+ 		"detail" : {
+ 			"1" : "दुख का अधिकार",
+ 			"2" : "एवेरस्ट मेरी शिखर यात्रा",
+ 			"3" : "रहीम  के दोहे",
+ 			"4" : "तुम कब जाओगे अतिथि",
+ 			"5" : "धर्म की आड़",
+ 			"6" : "रैदास के पद",
+ 			"7" : "एक फूल की चाह"
+ 		}, 	
+ 		"nonDetail" : {
+ 			"1" : "गिल्लू",
+ 			"2" : "स्मृति",
+ 			"3" : "हामिद खा",
+ 			"4" : "दिये जल उठे"
+ 		}
+ 	},
+ 	"english" : {
+ 		"detail":{
+ 			"1" : "The Fun They Had",
+ 			"2" : "The Sound of Music",
+ 			"3" : "The Little Girl",
+ 			"4" : "A Truly Beautiful Mind",
+ 			"6" : "My Childhood",
+ 			"7" : "packing",
+ 			"8" : "reach for the top",
+ 			"9" : "the bond of love",
+ 			"11" : "If I were you"
+
+ 		},
+ 		"nonDetail" : {
+ 			"1" : "The lost child",
+ 			"2" : "the adventures of toto",
+ 			"4" : "In the kingdom of fools",
+ 			"5" : "The happy prince",
+ 			"6" : "weathering the storm in ersama",
+ 			"7" : "the last leaf",
+ 			"8" : "a house is not a home",
+ 			"10" : "the beggar"
+ 		},
+
+ 		"poems" : {
+ 			"1" : "road not taken",
+ 			"2" : "wind",
+ 			"3" : "rain on the roof",
+ 			"4" : "legend of the northland",
+ 			"6" :  "no men are foreign",
+ 			"8" : "on killing the tree",
+ 			"9" : "the snake trying"
+ 		}
+
+ 	}
+
+ }

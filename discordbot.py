@@ -5,6 +5,8 @@ from user_defined import TOKEN_1, TOKEN_2
 from get_period import sprd
 from get_period import period
 
+from studentProfileHandler import ReturnPortionsSpecific
+
 from quotes import quote
 from quotes import rand_no, data
 
@@ -35,6 +37,8 @@ token = str(TOKEN_1 + TOKEN_2)
 results = []
 client = discord.Client()  
 
+client.command_prefix = '.'
+
 
 @client.event  
 async def on_ready(): 
@@ -43,6 +47,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+	# print(message.author.display_name)
 	
 	if "period?" == message.content.lower():
 			
@@ -77,14 +82,156 @@ async def on_message(message):
 		period_req = sprd(day_, prd_)
 		await message.channel.send(f"``` You will be having {period_req} ```")
 		sleep(1)
-	if message.content.lower() == '.q'and (str(message.author) == 'iSimpYT_#3772' or str(message.author) == 'iSimpYT_#8601' ):
-			await message.channel.send(f"```[User Spamming Reported] [You can use this command after 785 Days]```")
 
-	else:
-		if message.content.lower() == '.q':
-			quote_tup = quote(rand_no, data)
-			await message.channel.send(f"```{quote_tup[0]}\n\n-- {quote_tup[1]}```")
-			
+
+	# if message.content.lower() == '.createprfl' :
+
+	# 	name = message.author.display_name.replace(' ', '_')
+
+	# 	if message.content.lower() == '.createprfl':
+	# 		if CheckStudentExistence(name = name):
+	# 			embed = discord.Embed(title = f'Student Profile for {message.author.display_name} Exists', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+	# 			description = f'Profile Exists', color = 0xCF0A0E)
+
+	# 			await message.channel.send(embed = embed)
+
+	# 		else:
+	# 			createStudent(name = name, description = None)
+	# 			embed = discord.Embed(title = f'Creating Student Profile for {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+	# 			description = f'Sucessfully Created Profile for {message.author.display_name}', color = 0x5cf2fa)
+	# 			await message.channel.send(embed = embed)
+
+	# 	elif message.content.lower()[:15] == '.createprfl -d' :
+	# 		description = message.content[15:]
+	# 		if CheckStudentExistence(name = name):
+	# 			embed = discord.Embed(title = f'Student Profile for {message.author.display_name} Exists', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+	# 			description = f'Profile Exists', color = 0xCF0A0E)
+
+	# 			await message.channel.send(embed = embed)
+
+	# 		else:
+	# 			createStudent(name = name, description = description)
+
+	# 			embed = discord.Embed(title = f'Creating Student Profile for {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+	# 			description = f'Sucessfully Created Profile for {message.author.display_name}', color = 0x5cf2fa)
+
+	# 			await message.channel.send(embed = embed)
+	
+	#maths
+
+	if message.content.lower() == "-m":
+		portions = str()
+		portions_list = list(ReturnPortionsSpecific('mathematics').values())
+		
+
+		for i, j  in enumerate(portions_list):
+			portions += f"Lesson {i+1} : {j}\n" 
+
+		embed = discord.Embed(title = f'Mathematics Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+				description = f'{portions}', color = 0xCF0A0E)
+		await message.channel.send(embed = embed)
+	
+	#chem
+	if message.content.lower() == "-c":
+		portions = str()
+		portions_list = list(ReturnPortionsSpecific('chemistry').values())
+		
+
+		for i, j  in enumerate(portions_list):
+			portions += f"Lesson {i+1} : {j}\n" 
+
+		embed = discord.Embed(title = f'chemistry Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+				description = f'{portions}', color = 0xCF0A0E)
+		await message.channel.send(embed = embed)
+	
+	#bio
+	if message.content.lower() == "-b":
+		portions = str()
+		portions_list = list(ReturnPortionsSpecific('biology').values())
+		
+
+		for i, j  in enumerate(portions_list):
+			portions += f"Lesson {i+1} : {j}\n" 
+
+		embed = discord.Embed(title = f'biology Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+				description = f'{portions}', color = 0xCF0A0E)
+		await message.channel.send(embed = embed)
+	#phy
+	if message.content.lower() == "-p":
+		portions = str()
+		portions_list = list(ReturnPortionsSpecific('-physics').values())
+		
+
+		for i, j  in enumerate(portions_list):
+			portions += f"Lesson {i+1} : {j}\n" 
+
+		embed = discord.Embed(title = f'physics Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+				description = f'{portions}', color = 0xCF0A0E)
+		await message.channel.send(embed = embed)
+
+
+	#history
+	if message.content.lower() == "-h":
+		portions = str()
+		portions_list = list(ReturnPortionsSpecific('history').values())
+		
+
+		for i, j  in enumerate(portions_list):
+			portions += f"Lesson {i+1} : {j}\n" 
+
+		embed = discord.Embed(title = f'History Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+				description = f'{portions}', color = 0xCF0A0E)
+		await message.channel.send(embed = embed)
+
+	#economics
+
+	if message.content.lower() == "-e":
+		portions = str()
+		portions_list = list(ReturnPortionsSpecific('economics').values())
+		
+
+		for i, j  in enumerate(portions_list):
+			portions += f"Lesson {i+1} : {j}\n" 
+
+		embed = discord.Embed(title = f'economics Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+				description = f'{portions}', color = 0xCF0A0E)
+		await message.channel.send(embed = embed)
+
+	#geo
+	if message.content.lower() == "-g":
+		portions = str()
+		portions_list = list(ReturnPortionsSpecific('geography').values())
+		
+
+		for i, j  in enumerate(portions_list):
+			portions += f"Lesson {i+1} : {j}\n" 
+
+		embed = discord.Embed(title = f'geography Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+				description = f'{portions}', color = 0xCF0A0E)
+		await message.channel.send(embed = embed)
+	#civics
+	if message.content.lower() == "-ci":
+		portions = str()
+		portions_list = list(ReturnPortionsSpecific('civics').values())
+		
+
+		for i, j  in enumerate(portions_list):
+			portions += f"Lesson {i+1} : {j}\n" 
+
+		embed = discord.Embed(title = f'Civics Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+				description = f'{portions}', color = 0xCF0A0E)
+		await message.channel.send(embed = embed)
+	if message.content.lower() == '!help -s':
+
+		description = "Mathematics : `-m`\nChemistry : `-c`\nBiology : `-b`\nPhysics : `-p`\nHistory : `-h`\nEconomics : `-e`\nGeography : `-g`\nCivics : `-ci`\n"
+
+		embed = discord.Embed(title = f'Portions Commands', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+				description = description, color = 0xCF0A0E)
+		await message.channel.send(embed = embed)
+
+
+
+
 
 
 		

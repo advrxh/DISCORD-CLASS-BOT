@@ -1,0 +1,1 @@
+cls && python PortionsApp.py
