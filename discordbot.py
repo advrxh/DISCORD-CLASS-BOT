@@ -140,7 +140,7 @@ async def on_message(message):
 		for i, j  in enumerate(portions_list):
 			portions += f"Lesson {i+1} : {j}\n" 
 
-		embed = discord.Embed(title = f'chemistry Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+		embed = discord.Embed(title = f'Chemistry Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
 				description = f'{portions}', color = 0xCF0A0E)
 		await message.channel.send(embed = embed)
 	
@@ -153,7 +153,7 @@ async def on_message(message):
 		for i, j  in enumerate(portions_list):
 			portions += f"Lesson {i+1} : {j}\n" 
 
-		embed = discord.Embed(title = f'biology Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+		embed = discord.Embed(title = f'Biology Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
 				description = f'{portions}', color = 0xCF0A0E)
 		await message.channel.send(embed = embed)
 	#phy
@@ -165,7 +165,7 @@ async def on_message(message):
 		for i, j  in enumerate(portions_list):
 			portions += f"Lesson {i+1} : {j}\n" 
 
-		embed = discord.Embed(title = f'physics Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+		embed = discord.Embed(title = f'Physics Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
 				description = f'{portions}', color = 0xCF0A0E)
 		await message.channel.send(embed = embed)
 
@@ -193,7 +193,7 @@ async def on_message(message):
 		for i, j  in enumerate(portions_list):
 			portions += f"Lesson {i+1} : {j}\n" 
 
-		embed = discord.Embed(title = f'economics Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+		embed = discord.Embed(title = f'Economics Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
 				description = f'{portions}', color = 0xCF0A0E)
 		await message.channel.send(embed = embed)
 
@@ -206,7 +206,7 @@ async def on_message(message):
 		for i, j  in enumerate(portions_list):
 			portions += f"Lesson {i+1} : {j}\n" 
 
-		embed = discord.Embed(title = f'geography Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
+		embed = discord.Embed(title = f'Geography Portions requested by {message.author.display_name}', url = 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd39vzol73omnio.cloudfront.net%2Fwp-content%2Fuploads%2F2015%2F07%2FSh5OUBgauqHJL300-500x4001.jpg&f=1&nofb=1', 
 				description = f'{portions}', color = 0xCF0A0E)
 		await message.channel.send(embed = embed)
 	#civics
